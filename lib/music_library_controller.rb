@@ -41,7 +41,14 @@ attr_accessor :path
       i += 1
       puts "#{i}. #{artist.name}"
     end
+  end
 
+  def list_genres 
+    i = 0
+    sort_by(Genre).map do |genre| 
+      i += 1 
+      puts "#{i}. #{genre.name}"
+    end 
   end
 
 end
