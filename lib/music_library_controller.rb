@@ -68,4 +68,22 @@ attr_accessor :path
 
   end
 
+  def list_songs_by_genre
+    i = 0
+    puts "Please enter the name of a genre:"
+    genre_name = gets.strip
+    genre1 = Genre.find_by_name(genre_name)
+    if genre1 != nil
+      sort_by(Genre).map do |genre|
+        if genre.name == genre1
+        i += 1
+        puts "#{i}. #{genre.songs}"
+        end
+      end
+    else nil
+    end
+
+  end
+    
+
 end
