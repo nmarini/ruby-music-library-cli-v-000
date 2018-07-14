@@ -24,15 +24,9 @@ attr_accessor :path
 
   end
 
-  def sort_by(something)
-    something.all.sort{|x, y| x.name <=> y.name}
-  end
   def list_songs
-    i = 0
-    sort_by(Song).map do |song|
-      i += 1
-      puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-    end
+    Song.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |song, i|
+    puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   end
 
   def list_artists
@@ -76,8 +70,9 @@ attr_accessor :path
     if genre1 != nil
       sort_by(Genre).map do |genre|
         if genre.name == genre1
-        i += 1
-        puts "#{i}. #{genre.songs}"
+        genre.songs.artist.map do |artist|
+          i += 1
+          puts "#{i}. #{artist.name} - #{artist}"
         end
       end
     else nil
