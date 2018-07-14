@@ -43,12 +43,12 @@ attr_accessor :path
     end
   end
 
-  def list_genres 
+  def list_genres
     i = 0
-    sort_by(Genre).map do |genre| 
-      i += 1 
+    sort_by(Genre).map do |genre|
+      i += 1
       puts "#{i}. #{genre.name}"
-    end 
+    end
   end
 
 end
