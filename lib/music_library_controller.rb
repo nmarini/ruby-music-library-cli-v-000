@@ -52,7 +52,7 @@ attr_accessor :path
   end
 
   def list_songs_by_artist
-    i = 0
+    i = 1
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
     artist1 = Artist.find_by_name(artist_name)
