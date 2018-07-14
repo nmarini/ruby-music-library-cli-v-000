@@ -52,14 +52,14 @@ attr_accessor :path
   end
 
   def list_songs_by_artist
-    i = 1
+    i = 0
     puts "Please enter the name of an artist:"
     artist_name = gets.strip
     artist1 = Artist.find_by_name(artist_name)
     if artist1 != nil
       sort_by(Song).map do |song|
-        i += 1
         if song.artist == artist1
+        i += 1
         puts "#{i}. #{song.name} - #{song.genre.name}"
         end
       end
