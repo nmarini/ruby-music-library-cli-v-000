@@ -64,6 +64,11 @@ attr_accessor :path
       end
     end
 
+    def play_song
+      input = gets.strip
+
+    end 
+
 
 
 
