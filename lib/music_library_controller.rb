@@ -40,7 +40,7 @@ attr_accessor :path
     sort_by(Artist).map do |artist|
       i += 1
       puts "#{i}. #{artist.name} - #{artist.song.name} - #{song.genre.name}"
-    end 
+    end
 
   end
 
