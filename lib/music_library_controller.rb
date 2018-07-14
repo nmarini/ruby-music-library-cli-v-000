@@ -25,7 +25,7 @@ attr_accessor :path
   end
 
     def list_songs
-
+       Song.all.sort{|x, y| x.name <=> y.name}
     end
 
 end
