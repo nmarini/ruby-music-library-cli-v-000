@@ -27,7 +27,7 @@ attr_accessor :path
   def list_songs
     Song.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |song, i|
       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-    end 
+    end
   end
 
   def list_artists
@@ -37,12 +37,10 @@ attr_accessor :path
   end
 
   def list_genres
-    i = 0
-    sort_by(Genre).map do |genre|
-      i += 1
-      puts "#{i}. #{genre.name}"
+      Genre.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |g, i|
+        puts "#{i}. #{g.name}"
+      end
     end
-  end
 
   def list_songs_by_artist
     i = 0
