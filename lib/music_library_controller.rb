@@ -84,6 +84,6 @@ attr_accessor :path
     end
 
   end
-    
+
 
 end
