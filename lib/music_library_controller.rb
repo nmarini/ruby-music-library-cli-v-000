@@ -30,7 +30,7 @@ end
 def list_songs
   i = 1
   alph_list.map do |song|
-  puts "#{i}. #{song.name} - #{song.artist.name} - #{song.genre.name}"
+  puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   i += 1
   end
 end
