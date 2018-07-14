@@ -59,7 +59,7 @@ attr_accessor :path
     if artist1 != nil
       sort_by(Song).map do |song|
         i += 1
-        if song.artist == artist1 
+        if song.artist == artist1
         puts "#{i}. #{song.name} - #{song.genre.name}"
         end
       end
