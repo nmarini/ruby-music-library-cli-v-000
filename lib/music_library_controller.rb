@@ -51,4 +51,9 @@ attr_accessor :path
     end
   end
 
+  def list_songs_by_artist
+    puts "Please enter an artist."
+    artist_name = gets.strip
+    Artist.all.find{|artist| artist.name == artist_name ? artist.songs }
+
 end
