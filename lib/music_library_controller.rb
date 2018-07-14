@@ -60,10 +60,10 @@ attr_accessor :path
       artist1.songs.map do |song|
         i += 1
         puts "#{i}. #{song.name}"
-      end 
+      end
     else nil
-    end 
+    end
 
-  end 
+  end
 
 end
