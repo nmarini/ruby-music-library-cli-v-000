@@ -59,7 +59,7 @@ attr_accessor :path
     if artist1 != nil
       artist1.songs.map do |song|
         i += 1
-        puts "#{i}. #{song.name}"
+        puts "#{i}. #{song.name} - #{song.genre.name}"
       end
     else nil
     end
