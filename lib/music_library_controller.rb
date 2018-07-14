@@ -22,6 +22,8 @@ attr_accessor :path
       loop
     end
 
+  end
+
     def list_songs
 
   end
