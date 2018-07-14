@@ -24,8 +24,15 @@ attr_accessor :path
 
   end
 
-    def list_songs
-       Song.all.sort{|x, y| x.name <=> y.name}
-    end
+  def self.alph_list
+  Song.all.sort{|x, y| x.name <=> y.name}
+end
+def self.list_songs
+  i = 1
+  alph_list.map do |song| 
+  puts "#{i}. #{song.name} - #{song.artist} - #{song.genre} "
+  i += 1
+  end
+end
 
 end
