@@ -29,7 +29,7 @@ attr_accessor :path
 end
 def self.list_songs
   i = 1
-  alph_list.map do |song| 
+  alph_list.map do |song|
   puts "#{i}. #{song.name} - #{song.artist} - #{song.genre} "
   i += 1
   end
