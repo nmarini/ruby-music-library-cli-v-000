@@ -45,7 +45,7 @@ attr_accessor :path
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
       input = gets.strip
-  
+
       if artist = Artist.find_by_name(input)
         artist.songs.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |s, i|
           puts "#{i}. #{s.name} - #{s.genre.name}"
@@ -53,23 +53,9 @@ attr_accessor :path
       end
     end
 
-  def list_songs_by_genre
-    i = 0
-    puts "Please enter the name of a genre:"
-    genre_name = gets.strip
-    genre1 = Genre.find_by_name(genre_name)
-    if genre1 != nil
-      sort_by(Genre).map do |genre|
-        if genre.name == genre1
-        genre.songs.artist.map do |artist|
-          i += 1
-          puts "#{i}. #{artist.name} - #{artist}"
-        end
-      end
-    else nil
-    end
+    
 
-  end
 
+  
 
 end
