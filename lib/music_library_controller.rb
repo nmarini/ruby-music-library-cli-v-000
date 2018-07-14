@@ -52,8 +52,18 @@ attr_accessor :path
   end
 
   def list_songs_by_artist
+    i = 0
     puts "Please enter an artist."
     artist_name = gets.strip
-    Artist.all.find{|artist| artist.name == artist_name ? artist.songs }
+    artist1 = Artist.find_by_name(artist_name)
+    if artist1 != nil
+      artist1.songs.map do |song|
+        i += 1
+        puts "#{i}. #{song.name}"
+      end 
+    else nil
+    end 
+
+  end 
 
 end
